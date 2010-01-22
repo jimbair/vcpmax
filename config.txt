@@ -1,0 +1,25 @@
+===VMFS-General===
+Raw device mapping (RDM) size___2TB minus 512B
+Volume size___64TB minus 16K
+Virtual machines per volume___256
+Volumes per host___256
+Extents per volume___32
+Hosts per cluster___32
+Extents size___2TB minus 512B
+Max I/O size (before splits)___32MB
+
+===VMFS-2===
+VMFS-2 Files per volume___256 + (64 x additional extents)
+VMFS-2 Blocksize___256MB
+VMFS-2 File size (block size=1 MB)___456GB
+VMFS-2 File size (block size=8 MB)___2TB
+VMFS-2 File size (block size=64MB)___27TB
+VMFS-2 File size (block size=256MB)___64TB
+
+===VMFS-3===
+VMFS-3 volumes configured per host___256
+VMFS-3 Files per volume___~30,720
+VMFS-3 Block size___8MB
+VMFS-3 File size (block size=1MB)___256GB minus 512B
+VMFS-3 File size (block size=2MB)___512GB minus 512B
+VMFS-3 File size (block size=4MB)___1TB minus 512B
