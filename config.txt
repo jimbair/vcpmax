@@ -84,7 +84,51 @@ Static targets per adapter port___61
 LUNs per host___256
 LUNs concurrently used___256
 NICs port bound with the software iSCSI stack per server___8
-Targets (the sum of static targets and dynamic targets may not exceed
-this figure)___256
+Targets (the sum of static targets and dynamic targets may not exceed this figure)___256
 Paths to a LUN___8
 Total paths___1024
+
+===ESX Host Compute===
+Virtual CPUs per host___512
+Virtual machines per host___320
+Logical processors per host___64
+Virtual CPUs per physical core___20
+Virtual CPUs per physical core for vSphere 4.0 Update 1___25
+
+===ESX Host Memory===
+Size of RAM per host___1TB
+Maximum RAM allocated to service console___800MB
+Minimum RAM allocated to service console___300MB
+Swap files___1 per virtual machine
+Swap file size___Same as max virtual machine RAM
+
+===ESX Host Physical NICs===
+e1000 NICs Ethernet ports (Intel PCI.x NIC)___32
+e1000e NICs Ethernet ports (Intel PCI.e NIC)___32
+igb 1GB Ethernet ports (Intel)___16
+tg3 1GB Ethernet ports (Broadcom)___32
+bnx2 1GB Ethernet ports (Broadcom)___16
+forcedeth 1GB Ethernet ports (Nvidia)___2
+s2io 10GB Ethernet ports (Neterion)___4
+nx_nic 10GB Ethernet ports (NetXen)___4
+ixgbe Oplin 10GB Ethernet ports (Intel)___4
+bnx2x 10GB Ethernet ports (Broadcom)___4
+Infiniband ports (refer to VMware Community Support)___N/A
+
+===ESX Host PCI VMDirectPath Devices===
+PCI VMDirectPath devices per host___8
+
+===ESX Host vNetwork Standard Switch===
+Total virtual network switch ports per host (vDS and vSS ports)___4096
+Virtual network switch ports per standard switch___4088
+Port groups per standard switch___512
+Standard switches per host___248
+
+===ESX Host vNetwork Distributed Switch===
+Total virtual network switch ports per host (vDS and vSS ports)___4096
+Distributed virtual network switch ports per vCenter___6000
+Distributed port groups per vCenter___512
+Distributed switches per vCenter___16
+Hosts per distributed switch___64
+
+

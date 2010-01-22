@@ -45,12 +45,13 @@ for section in sections:
         # Skip any blank lines we inhereit
         if line == '\n' or line == '':
             continue
-        try:
-            question, answer = line.split('___')
-        except:
-            print 'Skipping this bad line:'
-            print str(line)
-            continue
+        # Disabled so I can find bad config lines easier
+        #try:
+        question, answer = line.split('___')
+        #except:
+        #    print 'Skipping this bad line:'
+        #    print str(line)
+        #    continue
         ourAnswer = raw_input("%s: " % (question,))
         total = total + 1
         if ourAnswer != answer:
