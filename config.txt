@@ -54,3 +54,37 @@ VMFS-3 Block size___8MB
 VMFS-3 File size (block size=1MB)___256GB minus 512B
 VMFS-3 File size (block size=2MB)___512GB minus 512B
 VMFS-3 File size (block size=4MB)___1TB minus 512B
+VMFS-3 File size (block size=8MB)___2TB minus 512B
+
+===NFS===
+Default NFS datastores___8
+NFS datastores___64
+
+===Fibre Channel===
+LUNs per host___256
+LUN size___2TB minus 512B
+Paths to a LUN___32
+Total paths on a host___1024
+LUNs concurrently opened by all virtual machines___256
+LUN ID___255
+HBAs per host___8
+HBA ports___16
+Targets per HBA___256
+
+===Hardware iSCSI Initiators===
+LUNs per host___256
+LUNs concurrently used___256
+Initiator ports per host___4
+Total paths on a host___1024
+Paths to a LUN___8
+Dynamic targets per adapter port___64
+Static targets per adapter port___61
+
+===Software iSCSI Initiators===
+LUNs per host___256
+LUNs concurrently used___256
+NICs port bound with the software iSCSI stack per server___8
+Targets (the sum of static targets and dynamic targets may not exceed
+this figure)___256
+Paths to a LUN___8
+Total paths___1024
