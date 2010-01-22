@@ -19,6 +19,11 @@
 # along with this program; if not, write to the Free Software Foundation,
 # Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
+# Answer metrics
+correct = 0
+incorrect = 0
+total = 0
+
 config = 'config.txt'
 raw = file(config, 'r')
 lines = raw.read()
@@ -35,7 +40,7 @@ for section in sections:
     for line in lines:
         # Skip our headers
         if line.startswith('===') and line.endswith('==='):
-           print '\nNow working on %s\n' % (line.strip('='),)
+           print '\nNow working on %s\n' % (line.strip('==='),)
            continue 
         # Skip any blank lines we inhereit
         if line == '\n' or line == '':
@@ -44,12 +49,20 @@ for section in sections:
             question, answer = line.split('___')
         except:
             print 'Skipping this bad line:'
-            print line
+            print str(line)
             continue
         ourAnswer = raw_input("%s: " % (question,))
+        total = total + 1
         if ourAnswer != answer:
             print "The correct answer is %s" % (answer)
+            incorrect = incorrect + 1
         else:
             print "Correct!"
+            correct = correct + 1
 
-print '\nAll done!'
+percentage = int(float(correct) / float(total) * 100)
+print '\nAll done!\n\nMetrics:'
+print 'Correct: %s' % (correct,)
+print 'Inorrect: %s' % (incorrect,)
+print 'Total: %s' % (total,)
+print '\nYour score: %s' % (percentage,) + '%'
