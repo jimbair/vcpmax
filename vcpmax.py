@@ -27,12 +27,16 @@ raw.close()
 # split into sections
 sections = lines.split('\n\n')
 
+# Work each section by line.
+# This is in case we want to handle sections
+# in the future in some fancy way.
 for section in sections:
     lines = section.split('\n')
     for line in lines:
         # Skip our headers
-        if line.startswith('==='):
+        if line.startswith('===') and line.endswith('==='):
            continue 
+        # Skip any blank lines we inhereit
         if line == '\n' or line == '':
             continue
         try:
@@ -42,7 +46,6 @@ for section in sections:
             print line
             continue
         ourAnswer = raw_input("%s: " % (question,))
-        ourAnswer = str(ourAnswer)
         if ourAnswer != answer:
             print "The correct answer is %s" % (answer)
         else:
