@@ -1,3 +1,34 @@
+===Compute===
+Virtual CPUs per virtual machine (Virtual SMP)___8
+
+===Memory===
+RAM per virtual machine___255GB
+Virtual machine swap file size___255GB
+
+===Storage Virtual Adapters and Devices===
+Virtual SCSI adapters per virtual machine___4
+Virtual SCSI targets per virtual SCSI adapter___15
+Virtual SCSI targets per virtual machine___60
+Disk size___2TB minus 512B
+IDE controllers per virtual machine___1
+IDE devices per virtual machine___4
+Floppy controllers per virtual machine___1
+Floppy devices per virtual machine___2
+
+===Networking Virtual Devices===
+Virtual NICs per virtual machine___10
+
+===Virtual Peripheral Ports===
+Parallel ports per virtual machine___3
+Serial ports per virtual machine___4
+
+===VMDirectPath===
+VMDirectPath PCI/PCIe devices per virtual machine___2
+VMDirectPath SCSI targets per virtual machine___60
+
+===Miscellaneous===
+Concurrent remote console connections to a virtual machine___40
+
 ===VMFS-General===
 Raw device mapping (RDM) size___2TB minus 512B
 Volume size___64TB minus 16K
