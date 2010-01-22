@@ -35,6 +35,7 @@ for section in sections:
     for line in lines:
         # Skip our headers
         if line.startswith('===') and line.endswith('==='):
+           print '\nNow working on %s\n' % (line.strip('='),)
            continue 
         # Skip any blank lines we inhereit
         if line == '\n' or line == '':
@@ -50,3 +51,5 @@ for section in sections:
             print "The correct answer is %s" % (answer)
         else:
             print "Correct!"
+
+print '\nAll done!'
